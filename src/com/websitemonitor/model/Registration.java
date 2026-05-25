@@ -2,6 +2,7 @@ package com.websitemonitor.model;
 
 import java.util.Date;
 
+// Handles account creation and authentication.
 public class Registration {
     private int ID;
     private Date registrationDate;

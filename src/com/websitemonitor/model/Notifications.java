@@ -2,6 +2,7 @@ package com.websitemonitor.model;
 
 import com.websitemonitor.communication.CommunicationChannel;
 
+// Creates and sends notification messages.
 public class Notifications {
     private String message;
 

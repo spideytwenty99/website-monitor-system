@@ -1,11 +1,12 @@
 package com.websitemonitor.model;
 
+//Represents a user's webiste subscription
 public class Subscription {
 
     private String status;
     private int subsID;
     private int frequency;
-    private Website website; // com.websitemonitor.model.Subscription class depends on the class  com.websitemonitor.model.Website!!
+    private Website website;
 
     public Subscription( int subsID, Website w){
         this.status="active";

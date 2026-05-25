@@ -1,5 +1,7 @@
 package com.websitemonitor.model;
 
+
+//Represents a monitored website
 public class Website {
     String url;
 

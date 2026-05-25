@@ -3,6 +3,7 @@ import com.websitemonitor.communication.CommunicationChannel;
 
 import java.util.ArrayList;
 
+//Represents a system user, stores user infos and manages subscriptions/channels
 public class User {
 
     private String username;

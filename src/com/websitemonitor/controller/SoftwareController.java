@@ -3,6 +3,7 @@ package com.websitemonitor.controller;
 import com.websitemonitor.model.*;
 import com.websitemonitor.service.UpdateChecker;
 
+// GRASP Controller that coordinates system operations.
 public class SoftwareController {
     public void handleUserRegistraion(Registration r, User u){
         r.createAccount(u);

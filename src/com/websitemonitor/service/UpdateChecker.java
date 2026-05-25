@@ -2,6 +2,7 @@ package com.websitemonitor.service;
 
 import com.websitemonitor.model.Website;
 
+// Monitors websites and detects updates.
 public class UpdateChecker {
     private int checkInterval;
     public UpdateChecker(int interval){
