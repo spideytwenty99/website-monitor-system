@@ -8,8 +8,8 @@ public class Registration {
     private Date registrationDate;
 
     public Registration(int id){
-        this.ID=id;
-        this.registrationDate=new Date();
+        this.ID               = id;
+        this.registrationDate = new Date();
     }
 
     public void createAccount(User u){

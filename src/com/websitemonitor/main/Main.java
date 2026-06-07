@@ -31,10 +31,10 @@ public class Main {
 
         // Registration
         Registration r=new Registration(100);
-        controller.handleUserRegistraion(r,u1);
+        controller.handleUserRegistration(r,u1);
 
         // Website and subscription
-        Website w=new Website("https://10ReasonswhyMessiIsGoat.com");
+        Website w=new Website("https://10ReasonswhyMessiIsGoat.com","<h1>Hello</h1>","Hello");
         Subscription s=new Subscription(1042, w);
 
         controller.handleSubscriptionActivation(s);

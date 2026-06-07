@@ -1,7 +1,9 @@
-package com.websitemonitor.controller;
+package com.websitemonitor.ObserverPattern;
+
+
 
 import com.websitemonitor.model.*;
-import com.websitemonitor.service.UpdateChecker;
+
 
 // GRASP Controller that coordinates system operations.
 public class SoftwareController {
@@ -21,16 +23,18 @@ public class SoftwareController {
         s.setFrequency(f);
     }
 
+    public void handleRegisterObserver(UpdateChecker c, Observer o){
+        c.attachObserver(o);
+    }
+
     public void handleUpdateRequest(UpdateChecker c, Website w){
-        c.monitor(w);
-        if (c.detectUpdate()){
-            System.out.println("Update detected on website: "+w.getUrl());
-        }
-
+      c.checkForUpdates(w);
     }
 
-    public void handleNotificationRequest(User u, String msg){
-        Notifications n=new Notifications(msg);
-        n.sendNotification(u);
-    }
+
+    //This method is removed for the observer pattern because, observer pattern handles notifications and updates automatically now
+//    public void handleNotificationRequest(User u, String msg){
+//        Notifications n=new Notifications(msg);
+//        n.sendNotification(u);
+//    }
 }

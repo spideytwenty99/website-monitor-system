@@ -9,21 +9,22 @@ public class Subscription {
     private Website website;
 
     public Subscription( int subsID, Website w){
-        this.status="active";
-        this.subsID=subsID;
-        this.website=w;
+        this.status  = "active";
+        this.subsID  = subsID;
+        this.website = w;
 
     }
 
     public void activate(){
         if (status.equals("active")){
-            System.out.println("com.websitemonitor.model.Subscription activated");
+            System.out.println("Subscription activated");
         }
     }
 
     public void deactivate(){
+        this.status="inactive";
         if (status.equals("inactive")){
-            System.out.println("com.websitemonitor.model.Subscription deactivated");
+            System.out.println("Subscription deactivated");
         }
     }
 
