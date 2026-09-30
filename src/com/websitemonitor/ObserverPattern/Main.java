@@ -16,8 +16,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        GUI g=new GUI();
-        g.displayInterface();
+//        GUI g=new GUI();
+//        g.displayInterface();
+
+
 
         SoftwareController controller=new SoftwareController();
 
@@ -33,7 +35,22 @@ public class Main {
         controller.handleUserRegistration(r1, u1);
         controller.handleUserRegistration(r2, u2);
 
-        Website w       = new Website("https://java&uml.com","<h1>Hello</h1>","Hello");
+//        Website w       = new Website("https://java&uml.com","<h1>Hello bro</h1>","Hello bro");
+
+
+        String websiteUrl;
+        //to ensure a command line application which reads websites from the command line, if none the simple demo website will excute
+        if (args.length > 0) {
+            websiteUrl = args[0];
+        } else {
+            websiteUrl = "https://java&uml.com";
+        }
+
+
+        Website w = new Website(
+                websiteUrl,
+                "<h1>Hello bro</h1>",
+                "Hello bro");
         Subscription s1 = new Subscription(1042, w);
         Subscription s2 = new Subscription(1043, w);
         u1.addSubscription(s1);
@@ -49,8 +66,8 @@ public class Main {
         String oldTextContent=w.getTextContent();
 
         //Website updated!!
-        w.setNewHtmlContent("<h2>Hallo</h2>");
-        w.setNewTextContent("Hallo");
+        w.setNewHtmlContent("<h2>Hello bro</h2>");
+        w.setNewTextContent("Hello bro");
 
         String newHtmlContent=w.getHtmlContent();
         String newTextContent=w.getTextContent();
